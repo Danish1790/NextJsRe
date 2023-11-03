@@ -13,16 +13,15 @@ export default function Home() {
   return (
    <div>
    <h1>Home Page</h1>
-   <Link href="/login">Go to Login Page</Link>
+   <br/>
+   <Link href="/productlist">Go to Product Page</Link>
     <br/>
-   <Link href="/login">Go to About Page</Link>
+    <br/>
+    <br/>
+    <button onClick={()=>navigate("/productlist")}>
+      Goto Product Page
+    </button>
 
-    <button onClick={()=>navigate("/login")}>
-      Goto Login Page
-    </button>
-    <button onClick={()=>navigate("/about")}>
-      Goto About Page
-    </button>
    </div>
   )
 }
