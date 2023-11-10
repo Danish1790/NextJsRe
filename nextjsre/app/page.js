@@ -16,6 +16,7 @@ export default function Home() {
    <br/>
    <Link href="/productlist">Go to Product Page</Link>
     <br/>
+    <Link href="calc">Goto Calculation</Link>
     <br/>
     <br/>
     <button onClick={()=>navigate("/productlist")}>
