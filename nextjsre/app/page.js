@@ -19,6 +19,8 @@ export default function Home() {
     <Link href="calc">Goto Calculation</Link>
     <br/>
     <Link href="user">Goto Users</Link>
+    <br/>
+    <Link href="todo">Goto Tasks</Link>
 
     <br/>
     <button onClick={()=>navigate("/productlist")}>

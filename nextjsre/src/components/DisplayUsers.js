@@ -6,7 +6,7 @@ import { removeUser } from '../reduxtoolkit/slice'
 
 
 const DisplayUsers = () => {
-  const userData = useSelector((data)=> data.users)
+  const userData = useSelector((data)=>data.userData.users)
   const dispatch = useDispatch()
 
   console.log(userData)

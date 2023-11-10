@@ -1,7 +1,13 @@
 "use client"
 const {configureStore} = require("@reduxjs/toolkit")
-import reducer from './slice'
+import userReducer from './slice'
+import todoReducer from './TodoSlice' 
+import numberReducer from './numberSlice'
 
 export const store = configureStore({
-    reducer
+    reducer:{
+        userData:userReducer,
+        todoData:todoReducer,
+        numberData:numberReducer
+    }
 })
