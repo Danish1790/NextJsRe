@@ -16,7 +16,7 @@ const ApiUser = () => {
   return (
     <div>
         <h3>
-        ApiUser
+        ApiUser Names
         </h3>
         {
           apiUserData.map((user)=>(
