@@ -21,6 +21,8 @@ export default function Home() {
     <Link href="user">Goto Users</Link>
     <br/>
     <Link href="todo">Goto Tasks</Link>
+    <br/>
+    <Link href="apiuser">Goto Api Users</Link>
 
     <br/>
     <button onClick={()=>navigate("/productlist")}>

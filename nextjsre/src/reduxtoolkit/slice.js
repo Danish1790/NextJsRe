@@ -1,8 +1,14 @@
-const { createSlice,nanoid } = require("@reduxjs/toolkit")
+const { createSlice,nanoid, createAsyncThunk } = require("@reduxjs/toolkit")
 
 const initialState = {
+    userApiData:[],
     users: []
 }
+
+export const fetchApiUsers =  createAsyncThunk("fetchApiUsers",async ()=>{
+    const result = await fetch("https://jsonplaceholder.typicode.com/users")
+    return result.json();
+})
 
 const Slice  = createSlice({
     name:"addUserSlice",   //it is the name of slice not the name affiliated with USER
@@ -25,6 +31,12 @@ const Slice  = createSlice({
             })
             state.users = data
         }
+    },
+    extraReducers:(builder)=>{
+        builder.addCase(fetchApiUsers.fulfilled,(state,action)=>{
+            state.isLoading = false,
+            state.userApiData = action.payload
+        })
     }
 })
 
