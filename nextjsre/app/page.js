@@ -31,6 +31,8 @@ export default function Home() {
     <Link href="hoc">Goto HOC </Link>
     <br/>
     <Link href="fref">Goto Fref </Link>
+    <br/>
+    <Link href="codesplit">Goto Code Split</Link>
 
     <br/>
     <button onClick={()=>navigate("/productlist")}>
