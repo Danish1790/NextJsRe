@@ -23,6 +23,8 @@ export default function Home() {
     <Link href="todo">Goto Tasks</Link>
     <br/>
     <Link href="apiuser">Goto Api Users</Link>
+    <br/>
+    <Link href="purecomponent">Goto pure compoonent</Link>
 
     <br/>
     <button onClick={()=>navigate("/productlist")}>
