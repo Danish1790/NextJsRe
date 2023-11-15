@@ -35,6 +35,8 @@ export default function Home() {
     <Link href="codesplit">Goto Code Split</Link>
     <br/>
     <Link href="context">Goto Context</Link>
+    <br/>
+    <Link href="about">Goto About</Link>
 
     <br/>
     <button onClick={()=>navigate("/productlist")}>

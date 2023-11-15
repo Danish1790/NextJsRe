@@ -3,6 +3,7 @@
 import React, { useRef, useState } from 'react'
 
 const page = () => {
+  const [isVisible, setIsVisible] = useState(true);
 
   // using uncontrolled
   let inputRef = useRef(null)
@@ -17,8 +18,8 @@ const page = () => {
   const [formData, setFormData] = useState({})
 
   const getData = (value, name) => {
-    const newData = {[name]:value}
-    setFormData({...formData,...newData})
+    const newData = { [name]: value }
+    setFormData({ ...formData, ...newData })
   }
   // console.log("form Data",formData)
 
@@ -40,7 +41,17 @@ const page = () => {
         <input type='text' name="name" placeholder='enter name' onChange={(e) => { getData(e.target.value, e.target.name) }} />
         <input type='number' name="age" placeholder='enter age' onChange={(e) => { getData(e.target.value, e.target.name) }} />
         <input type='date' name="date" placeholder='enter date' onChange={(e) => { getData(e.target.value, e.target.name) }} />
-        <button onClick={()=>{console.log(formData)}}>Submit</button>
+        <button onClick={() => { console.log(formData) }}>Submit</button>
+      </div>
+
+      <br />
+      <br />
+      <br />
+      <div>
+        {isVisible && <p>This component is visible!</p>}
+        <button onClick={() => setIsVisible(!isVisible)}>
+          Toggle Visibility
+        </button>
       </div>
     </div>
   )

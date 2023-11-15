@@ -16,6 +16,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
       <Providers>
+      <h1 style={{backgroundColor:"orange"}}>Navbar:Common Lauout</h1>
       {children}
       </Providers>
       </body>
