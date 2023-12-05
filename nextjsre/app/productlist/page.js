@@ -4,22 +4,23 @@ import { useState, useEffect } from 'react'
 
 const Product = () => {
 
-    const [product, setProduct] = useState();
+    const [product, setProduct] = useState("");
     useEffect( () => {
         return async () => {
             let data = await fetch("https://dummyjson.com/products");
             data = await data.json();
-            // console.log(data, "data")
+            console.log(data, "data")
             setProduct(data.products)
         }
     }, [])
+    console.log("product",product[0])
 
     return (
         <div>
             <h2>Product</h2>
             {
                 product.map((item) => (
-                    {/* <h3>{item.title}</h3> */}
+                    <h3>{item.title}</h3>
                 ))
             }
         </div>

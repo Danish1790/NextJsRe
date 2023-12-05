@@ -6,7 +6,7 @@ import UserInput from '@/src/components/UserInput'
 const page = () => {
     let userUpdateRef = useRef(null)
     const updateRef = () => {
-        userUpdateRef.current.value = "updated value"
+        userUpdateRef.current.value = "updated value through use ref hook"
         userUpdateRef.current.style.color = "red"
     }
     return (

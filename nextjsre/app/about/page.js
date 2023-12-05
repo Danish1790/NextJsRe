@@ -12,6 +12,8 @@ const About = () => {
             <Link href="/about/aboutcollege">About College</Link>
             <hr />
             <Link href="/about/aboutteacher">About Teacher</Link>
+            <hr />
+            <Link href="/about/studentlist">Student List</Link>
         </div>
     )
 }

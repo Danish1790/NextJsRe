@@ -32,11 +32,16 @@ export default function Home() {
     <br/>
     <Link href="fref">Goto Fref </Link>
     <br/>
+    <br/>
+    <Link href="productlist">Goto productlist </Link>
+    <br/>
     <Link href="codesplit">Goto Code Split</Link>
     <br/>
     <Link href="context">Goto Context</Link>
     <br/>
     <Link href="about">Goto About</Link>
+    <br/>
+    <Link href="searchfilter">Goto Search Filter </Link>
 
     <br/>
     <button onClick={()=>navigate("/productlist")}>
