@@ -19,7 +19,7 @@ const Product = () => {
         <div>
             <h2>Product</h2>
             {
-                product.map((item) => (
+                product && product.map((item) => (
                     <h3>{item.title}</h3>
                 ))
             }
